@@ -3,6 +3,9 @@ ES6 Weather Forecast in JavaScript using EcmaScript 6 (2015).
 Looks like this:
 ![ES6 Weather Forecast](./screenshots/es6WeatherForecast.png)
 
+Demo [here](http://josequinto.com/forecast/index.html)
+
+
 ## Features
 - [ES6](http://es6-features.org) (with [babel](https://babeljs.io))
 - [SCSS](http://sass-lang.com)
