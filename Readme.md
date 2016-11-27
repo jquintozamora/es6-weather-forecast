@@ -76,9 +76,6 @@ $ npm run lint
 
 
 <br /><br />
-
-
-<br /><br />
 ## Contributing
 Please feel free to add your own improvement. I am waiting your Pull Request (PR).
 
