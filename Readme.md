@@ -12,6 +12,7 @@ Demo [here](http://josequinto.com/forecast/index.html)
 - Hot Module Replacement for faster development
 - Axios as promise based HTTP Client. Read this [Fetch vs Axios comparison](https://github.com/mzabriskie/axios/issues/314)
 - [Forecast API](http://openweathermap.org/forecast5)
+- Responsive design
 - Mock Data allowing working offline and saving calls to weather API
 - Webpack
     - [Webpack-dev-server](https://webpack.js.org/how-to/develop/#webpack-dev-server)
@@ -27,9 +28,13 @@ Demo [here](http://josequinto.com/forecast/index.html)
 
 <br />
 
-### Features NOT INCLUDED (TODOs)
+### Features NOT INCLUDED (with more time...)
 - TDD. Configure Test Driven Development environment. Mocha, Chai, or Jest...
-
+- Create React component as well
+- Add a selector of Locations to allow the user to select more Locations (not only London)
+- Improve the design
+- Add more information about clouds, wind, etc...
+- Even if that is responsive (i used float divs) it could be targeted with media queries and the mobile user experience could be improved.
 
 
 <br /><br />
