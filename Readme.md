@@ -25,11 +25,11 @@ Demo [here](http://josequinto.com/forecast/index.html)
          - [UglifyJsPlugin with options](https://github.com/webpack/webpack/blob/v1.13.3/lib/optimize/UglifyJsPlugin.js)
          - Use include in the loader instead of the exclude. [More info](http://stackoverflow.com/questions/37823764/how-include-and-exclude-works-in-webpack-loader)
          - More perfomance tips: [here](https://medium.com/@khanght/optimize-webpack-production-build-ec594242b222#.bj3eyg65p)
+ - Jest as testing tool. Tests under __test__ folder
 
 <br />
 
 ### Features NOT INCLUDED (with more time...)
-- TDD. Configure Test Driven Development environment. Use Jest.
 - Create React component as well
 - Add a selector of Locations to allow the user to select more Locations (not only London)
 - Improve the design

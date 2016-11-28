@@ -12,7 +12,8 @@
     "start": "set NODE_ENV=development && node server.js",
     "dev": "set NODE_ENV=development && webpack --progress --config ./webpack/webpack.dev.config.js",
     "build": "set NODE_ENV=production && webpack --progress --config ./webpack/webpack.production.config.js",
-    "lint": "./node_modules/.bin/eslint ./app/src"
+    "lint": "./node_modules/.bin/eslint ./app/src",
+    "test": "jest"
   },
   "devDependencies": {
     "axios": "^0.15.2",
@@ -23,6 +24,7 @@
     "css-loader": "~0.25.0",
     "eslint": "^3.11.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "jest": "^17.0.3",
     "node-sass": "~3.11.3",
     "opener": "~1.4.2",
     "sass-loader": "~4.0.2",
