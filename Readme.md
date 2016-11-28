@@ -36,6 +36,7 @@ Demo [here](http://josequinto.com/forecast/index.html)
 - Add more information about clouds, wind, etc...
 - Even if that is responsive (i used float divs) it could be targeted with media queries and the mobile user experience could be improved.
 - Initial Spinner meanwhile the app is doing the query to weather API
+- Add the results to sessionStorage cache
 
 
 <br /><br />
