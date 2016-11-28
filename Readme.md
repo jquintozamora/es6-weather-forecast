@@ -29,7 +29,7 @@ Demo [here](http://josequinto.com/forecast/index.html)
 <br />
 
 ### Features NOT INCLUDED (with more time...)
-- TDD. Configure Test Driven Development environment. Mocha, Chai, or Jest...
+- TDD. Configure Test Driven Development environment. Use Jest.
 - Create React component as well
 - Add a selector of Locations to allow the user to select more Locations (not only London)
 - Improve the design
