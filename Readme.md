@@ -26,6 +26,7 @@ Demo [here](http://josequinto.com/forecast/index.html)
          - Use include in the loader instead of the exclude. [More info](http://stackoverflow.com/questions/37823764/how-include-and-exclude-works-in-webpack-loader)
          - More perfomance tips: [here](https://medium.com/@khanght/optimize-webpack-production-build-ec594242b222#.bj3eyg65p)
 - Jest as testing tool. Tests under \_\_tests\_\_ folder
+    - Add test like [this](https://github.com/andrew-codes/react-jest-browserify-gulp-bootstrap/blob/master/__tests__/components/CheckboxWithLabel-spec.js)
 
 <br />
 

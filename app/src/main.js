@@ -1,6 +1,7 @@
 // Import CSS
 import css from "./../stylesheets/main.scss";
 
+// Weather Component using ES6
 import { WeatherComponent } from "./components/WeatherComponent";
 
 // If we want to use Mock Date please swap this files. 
@@ -11,6 +12,7 @@ import { getForecastResults } from "./utils/api";
 
 const initialDiv = document.getElementById("weatherDiv");
 
+// API call to get the results
 getForecastResults("London")
     .then(data => { 
         const filteredList = data.data.list.filter((item) => { 
