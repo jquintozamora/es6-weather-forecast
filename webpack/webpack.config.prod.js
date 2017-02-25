@@ -4,7 +4,7 @@
 //  author: Jose Quinto - https://blogs.josequinto.com
 //
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-const path = require('path');
+const resolve = require('path').resolve;
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -17,7 +17,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.join(__dirname, './../dist'),
+    path: resolve(__dirname, './../dist'),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
@@ -27,7 +27,8 @@ module.exports = {
         'NODE_ENV': JSON.stringify('production')      // Reduces 78 kb on React library
       }
     }),
-    new ExtractTextPlugin('../dist/main.css', {
+    new ExtractTextPlugin({
+      filename: '../dist/main.css',
       allChunks: true
     }),
 
@@ -35,7 +36,6 @@ module.exports = {
     // Here you have all the available by now: 
     //    Webpack 1. https://github.com/webpack/webpack/blob/v1.13.3/lib/optimize
     //    Webpack 2. https://github.com/webpack/webpack/tree/master/lib/optimize
-    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false,
@@ -58,21 +58,37 @@ module.exports = {
         comments: false
       },
 
-    }),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.optimize.AggressiveMergingPlugin()
+    })
   ],
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',                           // User loader instead loader for compatiblity with next WebPack 2
-        include: path.resolve(__dirname, './../app/src')  // Use include instead exclude to improve build performance
+        use: 'babel-loader',                           // User loader instead loader for compatiblity with next WebPack 2
+        include: resolve(__dirname, './../app/src')  // Use include instead exclude to improve build performance
       },
       {
         test: /\.scss$/i,
-        loader: ExtractTextPlugin.extract("style", "css!sass"),
-        include: path.resolve(__dirname, '../app/stylesheets'),
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+                importLoaders: 1,
+                minimize: true
+              }
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true
+              }
+            }
+          ]
+        }),
+        include: resolve(__dirname, '../app/stylesheets')
       }
     ]
   }
